@@ -1,0 +1,27 @@
+<table class="w-100 table">
+    <thead>
+        <tr>
+            <th class="text-center">Avatar</th>
+            <th class="text-center">Id</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Email</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td class="text-center">
+                <img src="{{user.avatar}}" alt="Profile {{user.id}}">
+            </td>
+            <td class="text-center">
+                {{user.id}}
+            </td>
+            <td class="text-center">
+                {{user.first_name}} {{user.last_name}}
+            </td>
+            <td class="text-center">
+                {{user.email}}
+            </td>
+        </tr>
+    </tbody>
+</table>
