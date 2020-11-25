@@ -8,7 +8,7 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class SearchComponent implements OnInit {
 
-  resultado: any = [];
+  result: any = [];
   buscando: boolean = true;
   error: boolean;
 
@@ -21,10 +21,10 @@ export class SearchComponent implements OnInit {
     if(id===''){
       this.buscando = true;
       this.error = false;
-      return this.resultado = [];
+      return this.result = [];
     }
     this.userService.getUser(id).subscribe((data: any) => {
-      this.resultado = data.data;
+      this.result = data.data;
       this.buscando = false;
       this.error = false;
     }, (error: any) => {

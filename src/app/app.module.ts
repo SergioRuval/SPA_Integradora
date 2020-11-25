@@ -9,8 +9,10 @@ import { routes } from './app.routes';
 import { UsersComponent } from './components/users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { ManageComponent } from './components/manage/manage.component';
 import { SearchComponent } from './components/search/search.component';
+import { UserComponent } from './components/user/user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PasswordPipe } from './pipes/password/password.pipe';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,16 @@ import { SearchComponent } from './components/search/search.component';
     FooterComponent,
     UsersComponent,
     SignUpComponent,
-    ManageComponent,
-    SearchComponent
+    SearchComponent,
+    UserComponent,
+    PasswordPipe
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
